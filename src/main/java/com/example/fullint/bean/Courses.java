@@ -14,6 +14,9 @@ public class Courses implements Serializable {
     @Column(nullable = false)
     private String name;
 
+    @Column
+    private String professor;
+
     @Column(nullable = false)
     private int credits;
 
@@ -23,15 +26,35 @@ public class Courses implements Serializable {
     @Column(nullable = false)
     private String specialization; //AI or CS or NW
 
+    @Column
+    private Integer max_students;
+
     public Courses() {
     }
 
-    public Courses(String name, int credits, int term, String specialization) {
-       // this.course_id = course_id;
+    public Courses(String name, String professor, int credits, int term, String specialization, Integer max_students) {
         this.name = name;
+        this.professor = professor;
         this.credits = credits;
         this.term = term;
         this.specialization = specialization;
+        this.max_students = max_students;
+    }
+
+    public String getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(String professor) {
+        this.professor = professor;
+    }
+
+    public Integer getMax_students() {
+        return max_students;
+    }
+
+    public void setMax_students(Integer max_students) {
+        this.max_students = max_students;
     }
 
     public Integer getCourse_id() {
