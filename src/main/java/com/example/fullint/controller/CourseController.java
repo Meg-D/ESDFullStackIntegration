@@ -16,10 +16,10 @@ public class CourseController {
 
     @POST
     @Path("/add")
-    @Produces(MediaType.TEXT_PLAIN)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN) //return type
+    @Consumes(MediaType.APPLICATION_JSON) //parameter
     public Response addCourse(Courses course) throws URISyntaxException{
-        boolean val = new CourseService().addCourse(course);
+        boolean val = new CourseService().addCourse(course); //in service
         if (val == true)
         return Response.ok().build();
         else

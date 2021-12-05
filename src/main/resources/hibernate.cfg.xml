@@ -5,7 +5,7 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/hibernatelab?createDatabaseIfNotExist=true</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/fullStklab?createDatabaseIfNotExist=true</property>
         <property name="connection.username">root</property>
         <property name="connection.password">euphoria19</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>

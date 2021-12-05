@@ -11,13 +11,13 @@ function submitFunction() {
     name: name,
     professor: professor,
     specialization: specialization,
-    credit: credit,
     term: term,
-    no_of_students: no_of_students,
+    credits: credit,
+    max_students: no_of_students
   };
 
   // Send to Backend
-  fetch("https://jsonplaceholder.typicode.com/posts", {
+  fetch("http://localhost:8082/fullInt_war/api/course/add", {
     // Adding method type
     method: "POST",
     // Adding body or contents to send
